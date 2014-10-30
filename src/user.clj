@@ -10,7 +10,9 @@
 (def app (-> routing/handler
              (wrap-reload)
              (wrap-stacktrace)
-             (wrap-defaults site-defaults)))
+             (wrap-defaults (assoc-in site-defaults
+                                      [:security :anti-forgery]
+                                      false))))
 
 (defonce jetty (run-jetty #'app {:port 8080 :join? false}))
 
