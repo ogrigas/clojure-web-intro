@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Movie List</h1>
+<table>
+    <tr>
+        <td>Title</td>
+        <td>Year</td>
+        <td>Directed By</td>
+    </tr>
+    {{#movies}}
+    <tr>
+        <td>{{title}}</td>
+        <td>{{year}}</td>
+        <td>{{director}}</td>
+    </tr>
+    {{/movies}}
+</table>
+</body>
+</html>
